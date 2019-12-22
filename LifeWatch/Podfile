@@ -1,0 +1,48 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+xcodeproj '/Users/jiangningtao/Documents/GitHub/LifeWatch/LifeWatch/LifeWatch.xcodeproj'  #也就是加上这句  'path/to/Project.xcodeproj'  这个是你项目的路径
+
+
+target 'LifeWatch' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for LifeWatch
+
+#  网络请求
+  pod 'AFNetworking'
+#  下拉刷新
+  pod 'MJRefresh'
+#  布局约束
+  pod 'Masonry'
+#  加载效果
+  pod 'MBProgressHUD'
+#  图片请求
+  pod 'SDWebImage'
+#  数据模型
+  pod 'JSONModel'
+  pod 'MJExtension'
+#  工具组件
+  pod 'YYKit'
+#  输入框自动上移
+  pod 'IQKeyboardManager', '~> 5.0.8'
+#  多样式Label布局
+  pod 'TYAttributedLabel'
+#  获取验证码倒计时按钮
+  pod 'JKCountDownButton'
+
+#百度地图SDK
+pod “BaiduMapKit”
+
+  target 'LifeWatchTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LifeWatchUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ReminderListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxN-9l-bEk">
+                        <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock" translatesAutoresizingMaskIntoConstraints="NO" id="q7u-YC-dha">
+                                <rect key="frame" x="10" y="10" width="24" height="24"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dON-yO-3JF">
+                                <rect key="frame" x="39" y="11.5" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSq-3h-Dws">
+                                <rect key="frame" x="241" y="11.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q7u-YC-dha" firstAttribute="leading" secondItem="hxN-9l-bEk" secondAttribute="leading" constant="10" id="3zV-Zp-sbE"/>
+                            <constraint firstItem="q7u-YC-dha" firstAttribute="centerY" secondItem="hxN-9l-bEk" secondAttribute="centerY" id="GDP-6B-160"/>
+                            <constraint firstItem="dON-yO-3JF" firstAttribute="centerY" secondItem="q7u-YC-dha" secondAttribute="centerY" id="QXU-Ph-h82"/>
+                            <constraint firstItem="jSq-3h-Dws" firstAttribute="centerY" secondItem="hxN-9l-bEk" secondAttribute="centerY" id="XGi-z3-mfa"/>
+                            <constraint firstItem="dON-yO-3JF" firstAttribute="leading" secondItem="q7u-YC-dha" secondAttribute="trailing" constant="5" id="d3N-Gd-DSN"/>
+                            <constraint firstAttribute="trailing" secondItem="jSq-3h-Dws" secondAttribute="trailing" constant="5" id="dXu-QI-H5B"/>
+                            <constraint firstItem="jSq-3h-Dws" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dON-yO-3JF" secondAttribute="trailing" constant="20" id="scO-hs-Ymg"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hxN-9l-bEk" secondAttribute="trailing" constant="16" id="SzE-GL-Ax4"/>
+                    <constraint firstAttribute="bottom" secondItem="hxN-9l-bEk" secondAttribute="bottom" id="abs-Ne-1k6"/>
+                    <constraint firstItem="hxN-9l-bEk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uuM-B4-QOe"/>
+                    <constraint firstItem="hxN-9l-bEk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vkE-Mk-VF3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bgView" destination="hxN-9l-bEk" id="REn-tV-98b"/>
+                <outlet property="remindLab" destination="jSq-3h-Dws" id="Mc7-gG-xhN"/>
+                <outlet property="timeLab" destination="dON-yO-3JF" id="YJy-lg-wbX"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_clock" width="24" height="24"/>
+    </resources>
+</document>

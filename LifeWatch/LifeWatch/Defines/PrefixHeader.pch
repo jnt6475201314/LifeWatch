@@ -1,0 +1,165 @@
+//
+//  PrefixHeader.pch
+//  LifWatch
+//
+//  Created by 姜宁桃 on 2018/4/27.
+//  Copyright © 2018年 姜宁桃. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <AFNetworking.h>
+#import <IQKeyboardManager.h>
+#import <JSONModel.h>
+#import <MBProgressHUD.h>
+#import <UIImageView+WebCache.h>
+
+#import <Masonry.h>
+#import <YYKit.h>
+#import <TYAttributedLabel.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
+//#import <HealthKit/HealthKit.h>
+#import <JKCountDownButton.h>
+
+#import "API.h"
+#import "WTConst.h"
+#import "NetRequest.h"
+#import "UserInstance.h"
+#import "SelectedView.h"
+#import "STPickerSingle.h"
+#import "ReportMonthPicker.h"
+#import "LanguegeHeader.h"
+#import "WebViewController.h"
+#import "BaseViewController.h"
+#import "LoginViewController.h"
+#import "RootTabBarController.h"
+#import "LifeWatch-Bridging-Header.h"
+#import "UIViewController+BarButton.h"
+#import "BaseNavigationViewController.h"
+// chartView
+#import "SymbolsValueFormatter.h"
+#import "SetValueFormatter.h"
+
+
+
+// Constants
+#define NULL_TO_NIL(obj) ({ __typeof__ (obj) __obj = (obj); __obj == [NSNull null] ? nil : obj; })
+#define IMAGE_NAMED(name) [UIImage imageNamed:name]
+#define systemFont(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define CallTel(Tel) [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", Tel]]]
+
+
+//#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+//#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define widthScale (kScreenWidth/375)
+#define heightScale (kScreenHeight/667)
+#define KVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] //app当前版本
+
+
+
+//iPhoneX / iPhoneXS
+#define  isIphoneX_XS     (kScreenWidth == 375.f && kScreenHeight == 812.f ? YES : NO)
+//iPhoneXR / iPhoneXSMax
+#define  isIphoneXR_XSMax    (kScreenWidth == 414.f && kScreenHeight == 896.f ? YES : NO)
+//异性全面屏
+#define   isFullScreen    (isIphoneX_XS || isIphoneXR_XSMax)
+
+// Status bar height.
+#define  StatusBarHeight     (isFullScreen ? 44.f : 20.f)
+
+// Navigation bar height.
+#define  NavigationBarHeight  44.f
+
+// Tabbar height.
+#define  TabbarHeight         (isFullScreen ? (49.f+34.f) : 49.f)
+
+// Tabbar safe bottom margin.
+#define  TabbarSafeBottomMargin         (isFullScreen ? 34.f : 0.f)
+
+// Status bar & navigation bar height.
+#define  StatusBarAndNavigationBarHeight  (isFullScreen ? 88.f : 64.f)
+
+#define kScreenBounds [UIScreen mainScreen].bounds
+
+
+//NavBar高度
+#define Navigation_Bar_Height (isFullScreen ? 88 : 64)
+//底部tab高度
+#define Tab_Bar_Height (isFullScreen ? 83 : 49)
+//状态栏高度
+#define Status_Bar_Height (isFullScreen ? 44 : 20)
+//获取系统对象
+#define kApplication        [UIApplication sharedApplication]
+#define kAppWindow          [UIApplication sharedApplication].delegate.window
+#define kAppDelegate        [AppDelegate shareAppDelegate]
+#define kRootViewController [UIApplication sharedApplication].delegate.window.rootViewController
+#define kUserDefaults       [NSUserDefaults standardUserDefaults]
+#define UserDefaults       [NSUserDefaults standardUserDefaults]
+#define kNotificationCenter [NSNotificationCenter defaultCenter]
+
+//View 圆角和加边框
+#define ViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
+
+// View 圆角
+#define ViewRadius(View, Radius)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES]
+
+/**
+ *  公共的颜色
+ */
+#define KClearColor [UIColor clearColor]
+#define KWhiteColor [UIColor whiteColor]
+#define KGreenColor nav_green_color
+#define KBlackColor [UIColor blackColor]
+#define KGrayColor [UIColor grayColor]
+#define KLightGrayColor [UIColor lightGrayColor]
+#define KBlueColor [UIColor blueColor]
+#define KRedColor [UIColor redColor]
+#define KOrangeColor [UIColor orangeColor]
+#define KDarkGrayColor [UIColor darkGrayColor]
+#define KDarkTextColor [UIColor darkTextColor]
+#define KGroupTableViewBackgroundColor [UIColor groupTableViewBackgroundColor]
+#define KTextFieldBorderColor KLightGrayColor
+
+
+#define color(a,b,c,d) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:d]
+/******** 主题颜色 ********/
+#define golden_color color(211, 178, 132, 1)    // 金色
+#define btn_green_color color(44, 155, 84, 1) // 绿色 按钮
+#define nav_green_color color(62, 171, 60, 1) // 绿色 导航栏
+
+/*
+ 特殊字符
+ */
+#define str_dui @"√"
+#define str_xia @"↓"
+#define str_shang @"↑"
+
+
+/**
+ 一些配置
+ **/
+#define BaiduMapAK @"jX5NcsXUSY48F4yXlDGQ4MhZ2G58K8pM"
+#define KBaiduMapAK @"jX5NcsXUSY48F4yXlDGQ4MhZ2G58K8pM"
+
+
+/**
+ 一些定义
+ **/
+#define KAccount @"account"     // 账号
+#define KUser   @"user"         // 用户数据
+#define KUserResDict @"UserResDict" // 用户首页默认数据
+#define KUserInstance [UserInstance shareInstance]
+#define KUserLoginModel [UserInstance shareInstance].userLoginModel   // 用户单例数据
+
+
+#endif /* PrefixHeader_pch */
