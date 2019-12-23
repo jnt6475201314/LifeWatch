@@ -380,6 +380,8 @@
 		FDDB995020C51D1E0054F4BB /* UserInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB994F20C51D1E0054F4BB /* UserInstance.m */; };
 		FDDB995320C51D770054F4BB /* UserLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDDB995220C51D770054F4BB /* UserLoginModel.m */; };
 		FDE5456120A5A04E00364C5E /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE5456020A5A04E00364C5E /* ForgetViewController.m */; };
+		FDEF31D523B101F80024044B /* NewDetailChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF31D423B101F80024044B /* NewDetailChartView.m */; };
+		FDEF31D623B101F80024044B /* NewDetailChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEF31D423B101F80024044B /* NewDetailChartView.m */; };
 		FDF303D220C7818C00633450 /* HealthyReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF303D120C7818C00633450 /* HealthyReportViewController.m */; };
 		FDF303D720C7820B00633450 /* HealthMonthlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF303D620C7820B00633450 /* HealthMonthlyViewController.m */; };
 		FDF303DA20C7821B00633450 /* HealthAnnuallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF303D920C7821B00633450 /* HealthAnnuallyViewController.m */; };
@@ -809,6 +811,9 @@
 		FDDB995220C51D770054F4BB /* UserLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginModel.m; sourceTree = "<group>"; };
 		FDE5455F20A5A04E00364C5E /* ForgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetViewController.h; sourceTree = "<group>"; };
 		FDE5456020A5A04E00364C5E /* ForgetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
+		FDEF31CD23B100F20024044B /* LifeWatch-Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LifeWatch-Swift.h"; sourceTree = "<group>"; };
+		FDEF31D323B101F80024044B /* NewDetailChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewDetailChartView.h; sourceTree = "<group>"; };
+		FDEF31D423B101F80024044B /* NewDetailChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewDetailChartView.m; sourceTree = "<group>"; };
 		FDF303D020C7818C00633450 /* HealthyReportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthyReportViewController.h; sourceTree = "<group>"; };
 		FDF303D120C7818C00633450 /* HealthyReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthyReportViewController.m; sourceTree = "<group>"; };
 		FDF303D520C7820B00633450 /* HealthMonthlyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthMonthlyViewController.h; sourceTree = "<group>"; };
@@ -1090,6 +1095,7 @@
 			isa = PBXGroup;
 			children = (
 				E40C799020A82C480051051B /* API.h */,
+				FDEF31CD23B100F20024044B /* LifeWatch-Swift.h */,
 				E40F7CB120974D2400680CE4 /* PrefixHeader.pch */,
 				E4E5F27C20B109B00053A356 /* LanguegeHeader.h */,
 				FD2EE0CB20B3CBF700C4FCC4 /* LifeWatch-Bridging-Header.h */,
@@ -1581,6 +1587,8 @@
 			children = (
 				FD50FD0520C66AAC0032989A /* DetailChartView.h */,
 				FD50FD0620C66AAC0032989A /* DetailChartView.m */,
+				FDEF31D323B101F80024044B /* NewDetailChartView.h */,
+				FDEF31D423B101F80024044B /* NewDetailChartView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1792,7 +1800,6 @@
 		FDF303E620C7D74500633450 /* HealthData */ = {
 			isa = PBXGroup;
 			children = (
-				FDF303E720C7D76900633450 /* View */,
 				FDF303E820C7D78600633450 /* HealthyDataViewController.h */,
 				FDF303E920C7D78600633450 /* HealthyDataViewController.m */,
 				FDF303EB20C7D7F300633450 /* HealthDataDailyViewController.h */,
@@ -1801,13 +1808,6 @@
 				FDF303EF20C7D80700633450 /* HealthDataMonthViewController.m */,
 			);
 			path = HealthData;
-			sourceTree = "<group>";
-		};
-		FDF303E720C7D76900633450 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		FDF303F120C7DA0D00633450 /* Contact */ = {
@@ -2400,6 +2400,7 @@
 				FD420C1A20EE1866002AF1D1 /* LCQRCodeUtil.m in Sources */,
 				FD39DE0B20ECABCA0052C7F5 /* DeviceListTableViewCell.m in Sources */,
 				FD228E34210339E600052EAC /* UIViewController+XHPhoto.m in Sources */,
+				FDEF31D523B101F80024044B /* NewDetailChartView.m in Sources */,
 				FD39DE0F20ECCD360052C7F5 /* SelectDeviceRelationViewController.m in Sources */,
 				FD0B67742101C4700090F8E8 /* MyAnnotation.m in Sources */,
 				E4037BC2209DAA5500157CA7 /* UIImage+WT.m in Sources */,
@@ -2582,6 +2583,7 @@
 				FD076A28239F2EAC00148246 /* LCQRCodeUtil.m in Sources */,
 				FD076A29239F2EAC00148246 /* DeviceListTableViewCell.m in Sources */,
 				FD076A2A239F2EAC00148246 /* UIViewController+XHPhoto.m in Sources */,
+				FDEF31D623B101F80024044B /* NewDetailChartView.m in Sources */,
 				FD076A2B239F2EAC00148246 /* SelectDeviceRelationViewController.m in Sources */,
 				FD076A2C239F2EAC00148246 /* MyAnnotation.m in Sources */,
 				FD076A2D239F2EAC00148246 /* UIImage+WT.m in Sources */,

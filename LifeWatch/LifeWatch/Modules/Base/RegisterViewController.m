@@ -140,7 +140,8 @@
 
 - (void)sendCodeEvent{
     NSString * url = KGetMobileCodeUrl;
-    NSDictionary * params = @{@"method":@"GetMobileCode", @"mobile":self.dataDict[@"mobile"], @"country_code":self.dataDict[@"Areacode"], @"type":@""};
+    NSString * _areaCode = [self.dataDict[@"Areacode"] substringFromIndex:1];
+    NSDictionary * params = @{@"method":@"GetMobileCode", @"mobile":self.dataDict[@"mobile"], @"country_code":_areaCode, @"type":@""};
     [NetRequest postUrl:url Parameters:params success:^(NSDictionary *resDict) {
         NSLog(@"%@", resDict);
         [self showHUD:resDict[@"msg"] de:1.0];

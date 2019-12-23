@@ -37,7 +37,8 @@
 #pragma mark - Event Hander
 - (void)nextButtonEvent{
     NSString * url = KGetMobileCodeUrl;
-    NSDictionary * params = @{@"method":@"GetMobileCode", @"mobile":self.mobileTF.text, @"type":@"password"};
+    self.areaCode = [self.areaCode substringFromIndex:1];
+    NSDictionary * params = @{@"method":@"GetMobileCode", @"mobile":self.mobileTF.text, @"type":@"password", @"country_code":self.areaCode};
     [NetRequest postUrl:url Parameters:params success:^(NSDictionary *resDict) {
         NSLog(@"%@", resDict);
         [self showHUD:resDict[@"msg"] de:1.0];
